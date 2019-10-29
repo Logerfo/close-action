@@ -1,0 +1,35 @@
+{
+  "name": "close-action",
+  "version": "0.0.1",
+  "private": true,
+  "description": "A GitHub Action that automatically closes issues fixed in pull requests that doesn't target the default branch.",
+  "keywords": [
+    "actions",
+    "close"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Logerfo/close-action.git"
+  },
+  "author": {
+    "email": "bruno@logerfo.tk",
+    "name": "Bruno Logerfo",
+    "url": "https://github.com/Logerfo"
+  },
+  "homepage": "https://github.com/close-action",
+  "bugs": "https://github.com/close-action/issues",
+  "license": "MIT",
+  "main": "src/main.js",
+  "scripts": {
+    "build": "ncc build src/main.js",
+    "lint": "eslint src/main.js"
+  },
+  "dependencies": {
+    "@actions/core": "1.2.0",
+    "@actions/github": "1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "6.5.1",
+    "@zeit/ncc": "0.20.5"
+  }
+}

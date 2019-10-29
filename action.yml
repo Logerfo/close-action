@@ -1,0 +1,19 @@
+name: close-action
+description: Automatically closes issues fixed in pull requests that doesn't target the default branch.
+author: Bruno Logerfo
+
+branding:
+  icon: git-pull-request
+  color: red
+
+inputs:
+  github-token:
+    description: The `GITHUB_TOKEN` secret.
+    required: true
+  comment:
+    description: If `true`, will comment on the closing issue(s).
+    default: true
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
