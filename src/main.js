@@ -2,7 +2,7 @@ const fs = require("fs").promises;
 const core = require("@actions/core");
 const github = require("@actions/github");
 
-const re = /(?:(?:resolv|clos)e[ds]?|fix(?:e[ds])?) +#(\d+)/ig,
+const re = /(?:(?:resolv|clos|fix)e[ds]?|fix) +#(\d+)/ig,
     token = core.getInput("github-token", { required: true }),
     comment = getInput("comment", "true") == "true",
     context = github.context,
