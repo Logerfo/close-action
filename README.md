@@ -1,7 +1,9 @@
 [![Dependencies Status](https://david-dm.org/logerfo/close-action/dev-status.svg)](https://david-dm.org/logerfo/close-action?type=dev)
 
 # Close Action
-This action will automatically close issues fixed in pull requests that doesn't target the default branch.
+This action will automatically close issues fixed in pull requests that doesn't target the default branch.  
+Only works for same repository references.  
+Keywords are documented [here](https://help.github.com/en/articles/closing-issues-using-keywords).
 
 ## Setting up
 Create a file named `.github/workflows/close.yml`.
