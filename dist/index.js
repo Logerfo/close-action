@@ -461,7 +461,7 @@ async function close() {
         core.info(`This pull request fixes no issue. Stepping out...`);
         return;
     }
-    for (const id in issues) {
+    for (const id of issues) {
         const issueResponse = await client.issues.get({
             issue_number: id,
             owner,
