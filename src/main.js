@@ -71,7 +71,7 @@ async function close() {
             repo,
         });
         core.debug(JSON.stringify(issueResponse.data));
-        if (issueResponse.data.state != "closed") {
+        if (issueResponse.data.state == "closed") {
             core.info(`Issue #${id} is already closed. Skipping...`);
             continue;
         }
