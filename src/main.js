@@ -39,7 +39,7 @@ async function run() {
 }
 
 async function close() {
-    if (context.payload.pull_request.state != "merged") {
+    if (!context.payload.pull_request.merged) {
         core.info("Pull request is not merged. Stepping out...");
         return;
     }
