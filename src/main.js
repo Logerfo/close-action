@@ -1,6 +1,6 @@
-const fs = require("fs").promises;
-const core = require("@actions/core");
-const github = require("@actions/github");
+const fs = require("fs").promises,
+    core = require("@actions/core"),
+    github = require("@actions/github");
 
 const re = /(?:(?:resolv|clos|fix)e[ds]?|fix) +#(\d+)/ig,
     token = core.getInput("github-token", { required: true }),
